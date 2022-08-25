@@ -39,3 +39,41 @@ function getQuestion() {
 
   // clear out any old question choices
   choicesEl.innerHTML = "";
+
+  // loop over choices
+  currentQuestion.choices.forEach(function(choice, i) {
+    // create new button for each choice
+    var choiceNode = document.createElement("button");
+    choiceNode.setAttribute("class", "choice");
+    choiceNode.setAttribute("value", choice);
+
+    choiceNode.textContent = i + 1 + ". " + choice;
+
+    // attach click event listener to each choice
+    choiceNode.onclick = questionClick;
+
+    // display on the page
+    choicesEl.appendChild(choiceNode);
+  });
+}
+
+function questionClick() {
+  // check if user guessed wrong
+  if (this.value !== questions[currentQuestionIndex].answer) {
+    // penalize time
+    time -= 15;
+
+    if (time < 0) {
+      time = 0;
+    }
+    // display new time on page
+    timerEl.textContent = time;
+    feedbackEl.textContent = "Wrong!";
+    feedbackEl.style.color = "red";
+    feedbackEl.style.fontSize = "400%";
+  } else {
+    feedbackEl.textContent = "Correct!";
+    feedbackEl.style.color = "green";
+    feedbackEl.style.fontSize = "400%";
+  }
+
