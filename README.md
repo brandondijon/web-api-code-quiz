@@ -1,7 +1,7 @@
 # web-api-code-quiz
 
 # Github
- ![github](https://user-images.githubusercontent.com/108966627/186590186-020019d9-38f2-4c38-8a02-51a942fb26d1.png)
+ ![github](https://user-images.githubusercontent.com/108966627/186730800-5f87a3ee-a9e3-4268-8639-6ac44b5546e9.png)
  
 # Link
 https://brandondijon.github.io/web-api-code-quiz/
