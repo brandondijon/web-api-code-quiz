@@ -77,3 +77,19 @@ function questionClick() {
     feedbackEl.style.fontSize = "400%";
   }
 
+  // flash right/wrong feedback
+  feedbackEl.setAttribute("class", "feedback");
+  setTimeout(function() {
+    feedbackEl.setAttribute("class", "feedback hide");
+  }, 1000);
+
+  // next question
+  currentQuestionIndex++;
+
+  // time checker
+  if (currentQuestionIndex === questions.length) {
+    quizEnd();
+  } else {
+    getQuestion();
+  }
+}
