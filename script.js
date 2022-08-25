@@ -11,3 +11,8 @@ var feedbackEl = document.querySelector("#feedback");
 var currentQuestionIndex = 0;
 var time = questions.length * 15;
 var timerId;
+
+function startQuiz() {
+  // hide start screen
+  var startScreenEl = document.getElementById("start-screen");
+  startScreenEl.setAttribute("class", "hide");
