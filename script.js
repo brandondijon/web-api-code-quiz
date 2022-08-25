@@ -93,3 +93,7 @@ function questionClick() {
     getQuestion();
   }
 }
+function quizEnd() {
+  // stop timer
+  clearInterval(timerId);
+
